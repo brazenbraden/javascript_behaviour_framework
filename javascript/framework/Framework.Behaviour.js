@@ -14,7 +14,6 @@ Framework.Behaviour = new Class({
   filters: {},
   addFilter:function(name, instantiator){
     this.filters[name] = instantiator;
-    //console.info('Filter added:', name, 'using options:', 'data-'+this._getOptionsKey(name));
   },
   addFilters:function(filters){
     for (const filter in filters){

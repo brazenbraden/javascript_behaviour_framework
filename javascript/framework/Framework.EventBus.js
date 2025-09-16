@@ -10,7 +10,6 @@ Framework.EventBus = new Class({
         this._prepare(fullEventName);
 
         var id = this.nextIds[fullEventName] += 1;
-        //console.error('ID', id, fullEventName+'::'+id);
         this.observers[fullEventName][id] = callback;
         return fullEventName+'::'+id;
     },
@@ -19,9 +18,7 @@ Framework.EventBus = new Class({
             fullEventName = parts[0],
             id = parts[1];
 
-        //console.warn(this.observers, this.nextIds);
         this.observers[fullEventName][id] = null;
-        //console.warn(this.observers, this.nextIds);
     },
     publish:function(channel, event, data){
         this._validate('channel', channel);

@@ -31,7 +31,6 @@ Framework.Trigger = new Class({
     },
     apply:function(wrapper){
         for (var domEvent in this.triggers){
-            //console.info('Applying trigger:', domEvent);
             wrapper.on(domEvent, $.proxy(this._handleEvent, this));
         }
     },
